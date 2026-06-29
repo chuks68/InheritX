@@ -247,6 +247,7 @@ impl InheritanceContract {
 
     /// Retrieve the current inheritance plan data.
     /// Contributors: Query plan storage, dynamically projects the accumulated yield.
+    #[contractquery]
     pub fn get_plan(env: Env, owner: Address) -> Result<InheritancePlan, Error> {
         let key = DataKey::Plan(owner.clone());
         if !env.storage().persistent().has(&key) {
