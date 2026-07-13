@@ -275,7 +275,10 @@ impl InheritanceContract {
             0u64
         };
 
-        let response = PlanInfo { plan, remaining_time };
+        let response = PlanInfo {
+            plan,
+            remaining_time,
+        };
         Ok(response)
     }
 
